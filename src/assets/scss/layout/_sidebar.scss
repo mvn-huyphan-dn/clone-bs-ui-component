@@ -1,0 +1,50 @@
+.page-sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #7f7f7f;
+  color: #fff;
+  transition: all 0.3s;
+
+  .sidebar-logo {
+    width: 250px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(198, 193, 185);
+    img {
+      width: 50px;
+    }
+  }
+
+  .sidebar-list {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .sidebar-item {
+    &__link {
+      width: 250px;
+      padding: 8px 16px;
+      color: rgb(198, 193, 185);
+      text-decoration: none;
+      &:hover {
+        background-color: #656565;
+        color: rgb(232, 230, 227);
+      }
+    }
+    svg {
+      width: 20px;
+      text-align: center;
+      margin-right: 20px;
+
+      height: 30px;
+    }
+  }
+
+  &.active {
+    margin-left: -250px;
+  }
+}
+
