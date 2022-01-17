@@ -1,11 +1,11 @@
 // === Font === //
-$font-body: 'Open Sans', sans-serif;
+$font-body: "Open Sans", sans-serif;
 
 // === Font Weight === //
 $font-weight: (
   normal: 400,
   medium: 600,
-  bold: 700
+  bold: 700,
 );
 
 // == Breakpoints === //
@@ -14,12 +14,13 @@ $breakpoints: (
   medium: 768px,
   wide: 960px,
   large: 1024px,
-  largest: 1280px
+  largest: 1280px,
 );
 
 // === Colors === //
 $colors: (
-  primary: #333,
+  primary: // #333
+  #379ad7,
   white: #fff,
   black: #111,
   txt-black: #333,
@@ -34,7 +35,7 @@ $colors: (
   brand-css: #379ad7,
   brand-js: #f1da4e,
   brand-scss: #be5f8b,
-  brand-nodejs: #7cbe42
+  brand-nodejs: #7cbe42,
 );
 
 // === z-index === //
@@ -45,13 +46,13 @@ $zindexs: (
   modal-backdrop: 1040,
   modal: 1050,
   popover: 1060,
-  tooltip: 1070
+  tooltip: 1070,
 );
 
 // === Typography === //
 $font-size-base: 0.875rem !default; // 14px
 $font-size-lg: $font-size-base * 1.25 !default;
-$font-size-sm: $font-size-base * .875 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
 
 $h-font-size: (
   h1: $font-size-base * 2.5,
@@ -59,5 +60,109 @@ $h-font-size: (
   h3: $font-size-base * 1.75,
   h4: $font-size-base * 1.5,
   h5: $font-size-base * 1.25,
-  h6: $font-size-base
+  h6: $font-size-base,
 );
+
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true !default;
+$enable-gradients: false !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+
+// === Clone Color === //
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+
+// === Contrast Color === //
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark: map-get($colors, black) !default;
+$color-contrast-light: map-get($colors, white) !default;
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 4.5 !default;
+
+// === Clone UI Color Variables === //
+$gray-900: #212529 !default;
+
+// === Body === //
+$body-bg: map-get($colors, white) !default;
+$body-color: $gray-900 !default;
+
+// === Font === //
+// $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+// === Border === //
+$border-width: 1px !default;
+$border-radius: 0.25rem !default;
+
+// === Active === //
+$component-active-color: map-get($colors, white) !default;
+$component-active-bg: map-get($colors, primary) !default;
+
+// == Form Input === //
+$input-focus-border-color: mix(
+  map-get($colors, white),
+  $component-active-bg,
+  50%
+);
+$input-btn-focus-width: 0.25rem !default;
+$input-btn-focus-color-opacity: 0.25 !default;
+$input-btn-focus-color: rgba(
+  $component-active-bg,
+  $input-btn-focus-color-opacity
+) !default;
+$input-btn-focus-blur: 0 !default;
+$input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+  $input-btn-focus-color !default;
+
+// === Button === //
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-focus-box-shadow: $input-btn-focus-box-shadow !default;
+
+// === Accordion === //
+$accordion-padding-y: 1rem !default;
+$accordion-padding-x: 1.25rem !default;
+$accordion-color: $body-color !default;
+$accordion-bg: $body-bg !default;
+$accordion-border-width: $border-width !default;
+$accordion-border-color: rgba(map-get($colors, black), 0.125) !default;
+
+$accordion-border-radius: $border-radius !default;
+$accordion-inner-border-radius: subtract(
+  $accordion-border-radius,
+  $accordion-border-width
+) !default;
+
+$accordion-body-padding-y: $accordion-padding-y !default;
+$accordion-body-padding-x: $accordion-padding-x !default;
+
+$accordion-button-padding-y: $accordion-padding-y !default;
+$accordion-button-padding-x: $accordion-padding-x !default;
+$accordion-button-color: $accordion-color !default;
+$accordion-button-bg: $accordion-bg !default;
+$accordion-transition: $btn-transition, border-radius 0.15s ease !default;
+$accordion-button-active-bg: tint-color($component-active-bg, 90%) !default;
+$accordion-button-active-color: shade-color(
+  map-get($colors, primary),
+  10%
+) !default;
+
+$accordion-button-focus-border-color: $input-focus-border-color !default;
+$accordion-button-focus-box-shadow: $btn-focus-box-shadow !default;
+
+// $accordion-icon-width: 1.25rem !default;
+// $accordion-icon-color: $accordion-button-color !default;
+// $accordion-icon-active-color: $accordion-button-active-color !default;
+$accordion-icon-transition: transform 0.2s ease-in-out !default;
+// $accordion-icon-transform: rotate(-180deg) !default;
+
+$accordion-icon-size: 1.25rem !default;
