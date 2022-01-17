@@ -6,6 +6,9 @@
   position: absolute;
   top: 0;
   right: 0;
+  .page-main {
+    margin-top: 30px;
+  }
   &.active {
     width: 100%;
   }
