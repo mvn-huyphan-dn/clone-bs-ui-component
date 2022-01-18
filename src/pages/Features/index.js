@@ -1,4 +1,9 @@
 import Home from "./Home";
 import AccordionPage from "./AccordionPage";
+import AlertsPage from "./AlertsPage";
 
-export { Home, AccordionPage };
+export { 
+  Home, 
+  AccordionPage, 
+  AlertsPage 
+};

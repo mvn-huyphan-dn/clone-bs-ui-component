@@ -245,3 +245,12 @@ $paddingOrmargin: (
     }
   }
 }
+
+//
+@mixin txt-bg-color($color) {
+  @if $color != null && map-get($colors, $color) !=null {
+    color: shade-color($color, 30%);
+    background-color: tint-color($color, 90%);
+    border-color: $color;
+  }
+}

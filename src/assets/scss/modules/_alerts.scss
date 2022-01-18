@@ -1,0 +1,40 @@
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: 5px;
+  border: 1px solid;
+  & + .alert {
+    margin-top: 1rem;
+  }
+  &-primary {
+    @include txt-bg-color(map-get($colors, primary));
+  }
+  &-secondary {
+    @include txt-bg-color(map-get($colors, secondary));
+  }
+  &-success {
+    @include txt-bg-color(map-get($colors, c-green));
+  }
+  &-danger {
+    @include txt-bg-color(map-get($colors, c-red));
+  }
+  &-warning {
+    @include txt-bg-color(map-get($colors, c-yellow));
+  }
+  &-info {
+    @include txt-bg-color(map-get($colors, c-cyan));
+  }
+  &-link {
+    font-weight: map-get($font-weight, bold);
+    color: inherit;
+    text-decoration: underline;
+  }
+  .close-button {
+    font-size: 1.25em;
+    margin-left: auto;
+    color: inherit;
+    cursor: pointer;
+    &:hover {
+      opacity: .75;
+    }
+  }
+}
