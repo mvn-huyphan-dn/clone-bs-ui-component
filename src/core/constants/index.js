@@ -32,5 +32,10 @@ export const listItem = [
     name: "Button",
     url: "/button",
     icon: <RiAlertFill />
+  },
+  {
+    name: "Button Group",
+    url: "/button-group",
+    icon: <RiAlertFill />
   }
 ];
