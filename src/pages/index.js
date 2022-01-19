@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Sidebar, Footer, Header } from "../components";
-import { AccordionPage, AlertsPage, BadgePage, Home } from "./Features";
+import {
+  AccordionPage,
+  AlertsPage,
+  BadgePage,
+  BreadcrumbPage,
+  Home,
+} from "./Features";
 
 export default function Pages() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -28,6 +34,9 @@ export default function Pages() {
             </Route>
             <Route path="/badge">
               <BadgePage />
+            </Route>
+            <Route path="/breadcrumb">
+              <BreadcrumbPage />
             </Route>
           </Switch>
         </main>
