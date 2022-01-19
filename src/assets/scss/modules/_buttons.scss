@@ -1,0 +1,36 @@
+.btn {
+  display: inline-block;
+  line-height: 1.5;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: map-get($map: $colors, $key: white);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.375em 0.75em;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &.btn-link {
+    background-color: map-get($map: $colors, $key: white);
+    color: map-get($map: $colors, $key: c-blue);
+    text-decoration: underline;
+    &:hover {
+      color: shade-color(map-get($colors, c-blue), 20%);
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.25rem tint-color(map-get($colors, c-blue), 50%);
+    }
+  }
+  &.btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+  }
+  &.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+  }
+}

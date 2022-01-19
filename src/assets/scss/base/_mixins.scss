@@ -328,3 +328,51 @@ $border-radius-list: (
     padding: 0.25rem * $i !important;
   }
 }
+
+// Component prefix class
+$component-prefix-list: (btn);
+
+@each $value in $component-prefix-list {
+  @each $key2, $value2 in $cloneColor {
+    .#{$value}-#{$key2} {
+      background-color: $value2;
+      border-color: $value2 !important;
+      &:hover {
+        background-color: shade-color($value2, 20%) !important;
+        border-color: shade-color($value2, 20%) !important;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem tint-color($value2, 50%);
+      }
+      &.disabled {
+        background-color: $value2;
+        border-color: $value2 !important;
+        opacity: 0.65;
+        pointer-events: none;
+        &:hover {
+          background-color: $value2 !important;
+          border-color: unset;
+        }
+        &:focus {
+          box-shadow: unset;
+        }
+      }
+      &.active {
+        background-color: shade-color($value2, 20%) !important;
+        border-color: shade-color($value2, 20%) !important;
+      }
+    }
+    .#{$value}-outline-#{$key2} {
+      background-color: transparent;
+      color: $value2 !important;
+      border-color: $value2 !important;
+      &:hover {
+        background-color: $value2 !important;
+        color: map-get($map: $colors, $key: white) !important;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.25rem tint-color($value2, 50%);
+      }
+    }
+  }
+}
