@@ -6,6 +6,7 @@ import {
   AlertsPage,
   BadgePage,
   BreadcrumbPage,
+  ButtonPage,
   Home,
 } from "./Features";
 
@@ -37,6 +38,9 @@ export default function Pages() {
             </Route>
             <Route path="/breadcrumb">
               <BreadcrumbPage />
+            </Route>
+            <Route path="/button">
+              <ButtonPage />
             </Route>
           </Switch>
         </main>

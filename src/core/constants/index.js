@@ -27,5 +27,10 @@ export const listItem = [
     name: "Breadcrumb",
     url: "/breadcrumb",
     icon: <RiAlertFill />
+  },
+  {
+    name: "Button",
+    url: "/button",
+    icon: <RiAlertFill />
   }
 ];
