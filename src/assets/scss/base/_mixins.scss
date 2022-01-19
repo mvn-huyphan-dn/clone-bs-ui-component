@@ -248,9 +248,85 @@ $paddingOrmargin: (
 
 //
 @mixin txt-bg-color($color) {
-  @if $color != null && map-get($colors, $color) !=null {
+  @if $color != null and map-get($colors, $color) !=null {
     color: shade-color($color, 30%);
     background-color: tint-color($color, 90%);
     border-color: $color;
+  }
+}
+
+// POSITION CLASSES
+
+@function time-percent($number) {
+  @return $number * 1%;
+}
+
+$positionList: (
+  top: top,
+  bottom: bottom,
+  left: left,
+  right: right,
+);
+
+@each $key, $value in $positionList {
+  @for $i from 0 through 100 {
+    .#{$key}-#{$i} {
+      #{$value}: time-percent($i) !important;
+    }
+  }
+}
+
+$cloneColor: (
+  primary: #0d6efd,
+  secondary: #777,
+  danger: #dc3545,
+  warning: #ffc107,
+  success: #198754,
+  info: #0dcaf0,
+);
+
+$class-prefix: (
+  background-color: bg-color,
+  color: color,
+);
+
+@each $key, $value in $cloneColor {
+  @each $key2, $value2 in $class-prefix {
+    .#{$value2}-#{$key} {
+      #{$key2}: $value !important;
+    }
+  }
+}
+
+@for $i from 0 through 100 {
+  @for $j from 0 through 100 {
+    .translate-#{$i}-#{$j} {
+      transform: translate(-$i * 1%, -$j * 1%) !important;
+    }
+  }
+}
+
+// BORDER RADIUS CLASS
+$border-radius-list: (
+  pill: 50rem,
+  circle: 50%,
+);
+
+@each $key, $value in $border-radius-list {
+  .br-#{$key} {
+    border-radius: $value !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  .br-#{$i} {
+    border-radius: 0.25rem * $i !important;
+  }
+}
+
+// Padding
+@for $i from 1 through 100 {
+  .p-#{$i} {
+    padding: 0.25rem * $i !important;
   }
 }

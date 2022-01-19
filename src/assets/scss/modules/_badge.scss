@@ -1,0 +1,7 @@
+.badge {
+  color: map-get($map: $colors, $key: white);
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0.35em 0.65em;
+  border-radius: 0.25rem;
+}

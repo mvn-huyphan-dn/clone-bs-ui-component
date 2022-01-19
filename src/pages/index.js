@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Sidebar, Footer, Header } from "../components";
-import { AccordionPage, AlertsPage, Home } from "./Features";
+import { AccordionPage, AlertsPage, BadgePage, Home } from "./Features";
 
 export default function Pages() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -25,6 +25,9 @@ export default function Pages() {
             </Route>
             <Route path="/alerts">
               <AlertsPage />
+            </Route>
+            <Route path="/badge">
+              <BadgePage />
             </Route>
           </Switch>
         </main>
