@@ -1,0 +1,33 @@
+.breadcrumb {
+  padding: 0;
+  list-style: none;
+  background-color: inherit;
+}
+
+.breadcrumb-item {
+  & + .breadcrumb-item {
+    padding-left: 0.5em;
+    &::before {
+      float: left;
+      padding-right: 0.5em;
+      color: map-get($map: $colors, $key: secondary);
+      content: "/";
+    }
+  }
+  &:not(.active) {
+    a {
+      color: map-get($map: $colors, $key: c-blue);
+      text-decoration: underline;
+    }
+  }
+}
+
+.breadcrumb-divider {
+  .breadcrumb-item {
+    & + .breadcrumb-item {
+      &::before {
+        content: ">";
+      }
+    }
+  }
+}
