@@ -18,4 +18,9 @@ export const listItem = [
     url: "/alerts",
     icon: <RiAlertFill />,
   },
+  {
+    name: "Badge",
+    url: "/badge",
+    icon: <RiAlertFill />,
+  },
 ];
