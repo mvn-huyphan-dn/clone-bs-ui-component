@@ -1,0 +1,37 @@
+.btn-group {
+  .btn {
+    border-radius: 0 !important;
+    margin: 0 !important;
+    &:first-of-type {
+      border-top-left-radius: 0.25rem !important;
+      border-bottom-left-radius: 0.25rem !important;
+    }
+    &:last-of-type {
+      border-top-right-radius: 0.25rem !important;
+      border-bottom-right-radius: 0.25rem !important;
+    }
+  }
+  &.btn-group-lg {
+    .btn {
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      border-radius: 0.3rem;
+    }
+  }
+  &.btn-group-sm {
+    .btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      border-radius: 0.2rem;
+    }
+  }
+}
+
+.btn-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .btn-group {
+    display: inline-flex;
+  }
+}
