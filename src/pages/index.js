@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Sidebar, Footer, Header } from "../components";
-import ButtongroupPage from "../components/ButtongroupPage";
+import ButtongroupPage from "./Features/ButtongroupPage";
 import {
   AccordionPage,
   AlertsPage,
@@ -10,6 +10,7 @@ import {
   ButtonPage,
   Home,
 } from "./Features";
+import CardPage from "./Features/CardPage";
 
 export default function Pages() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -45,6 +46,9 @@ export default function Pages() {
             </Route>
             <Route path="/button-group">
               <ButtongroupPage />
+            </Route>
+            <Route path="/card">
+              <CardPage />
             </Route>
           </Switch>
         </main>

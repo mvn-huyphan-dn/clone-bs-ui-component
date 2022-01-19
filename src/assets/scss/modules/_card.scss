@@ -1,0 +1,63 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  background-color: map-get($map: $colors, $key: white);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  .card-header {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: map-get($map: $colors, $key: bg-gray);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+  .card-footer {
+    padding: 0.5rem 1rem;
+    margin-top: 0;
+    background-color: map-get($map: $colors, $key: bg-gray);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+  }
+}
+
+.card-img {
+  width: 100%;
+  &-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  &-bottom {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  line-height: 1.5em;
+  padding: 1rem;
+  .card-title {
+    margin-bottom: 0.5rem;
+  }
+  .card-subtitle {
+    color: map-get($map: $colors, $key: txt-gray);
+  }
+  .card-text {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .card-link {
+    color: map-get($map: $colors, $key: c-blue);
+    text-decoration: underline;
+    & + .card-link {
+      margin-left: 1rem;
+    }
+  }
+  .btn {
+    margin: 0 !important;
+  }
+}

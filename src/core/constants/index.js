@@ -26,16 +26,21 @@ export const listItem = [
   {
     name: "Breadcrumb",
     url: "/breadcrumb",
-    icon: <RiAlertFill />
+    icon: <RiAlertFill />,
   },
   {
     name: "Button",
     url: "/button",
-    icon: <RiAlertFill />
+    icon: <RiAlertFill />,
   },
   {
     name: "Button Group",
     url: "/button-group",
-    icon: <RiAlertFill />
-  }
+    icon: <RiAlertFill />,
+  },
+  {
+    name: "Card",
+    url: "/card",
+    icon: <RiAlertFill />,
+  },
 ];

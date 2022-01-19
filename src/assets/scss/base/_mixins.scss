@@ -285,13 +285,20 @@ $cloneColor: (
 
 $class-prefix: (
   background-color: bg-color,
-  color: color,
+  // color: color,
+  color: text,
 );
 
 @each $key, $value in $cloneColor {
   @each $key2, $value2 in $class-prefix {
     .#{$value2}-#{$key} {
       #{$key2}: $value !important;
+      .card-header {
+        background-color: $value !important;
+      }
+    }
+    .border-#{$key} {
+      border-color: $value !important;
     }
   }
 }
@@ -335,7 +342,7 @@ $component-prefix-list: (btn);
 @each $value in $component-prefix-list {
   @each $key2, $value2 in $cloneColor {
     .#{$value}-#{$key2} {
-      background-color: $value2;
+      background-color: $value2 !important;
       border-color: $value2 !important;
       &:hover {
         background-color: shade-color($value2, 20%) !important;
