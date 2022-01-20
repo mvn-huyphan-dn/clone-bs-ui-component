@@ -18,7 +18,9 @@ export default function ButtongroupPage() {
         <Link to="#" className="btn btn-primary active">
           Active Link
         </Link>
-        <Link className="btn btn-primary">Link</Link>
+        <Link to="#" className="btn btn-primary">
+          Link
+        </Link>
         <Link to="#" className="btn btn-primary">
           Link
         </Link>

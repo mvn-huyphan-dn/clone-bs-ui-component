@@ -177,3 +177,16 @@ $accordion-icon-transition: transform 0.2s ease-in-out !default;
 // $accordion-icon-transform: rotate(-180deg) !default;
 
 $accordion-icon-size: 1.25rem !default;
+
+//Hr
+hr {
+  margin: 1rem 0;
+  color: inherit; // 1
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+hr:not([size]) {
+  height: $border-width; // 2
+}
