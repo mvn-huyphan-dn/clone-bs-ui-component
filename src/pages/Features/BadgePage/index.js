@@ -5,22 +5,22 @@ export default function BadgePage() {
     <div>
       <div>
         <h1 className="mt-10">
-          Example heading <span class="badge bg-color-secondary">New</span>
+          Example heading <span className="badge bg-color-secondary">New</span>
         </h1>
         <h2 className="mt-10">
-          Example heading <span class="badge bg-color-secondary">New</span>
+          Example heading <span className="badge bg-color-secondary">New</span>
         </h2>
         <h3 className="mt-10">
-          Example heading <span class="badge bg-color-secondary">New</span>
+          Example heading <span className="badge bg-color-secondary">New</span>
         </h3>
         <h4 className="mt-10">
-          Example heading <span class="badge bg-color-secondary">New</span>
+          Example heading <span className="badge bg-color-secondary">New</span>
         </h4>
         <h5 className="mt-10">
-          Example heading <span class="badge bg-color-secondary">New</span>
+          Example heading <span className="badge bg-color-secondary">New</span>
         </h5>
         <h6 className="mt-10">
-          Example heading <span class="badge bg-color-secondary">New</span>
+          Example heading <span className="badge bg-color-secondary">New</span>
         </h6>
       </div>
       <div>

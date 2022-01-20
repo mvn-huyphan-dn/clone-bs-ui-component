@@ -43,4 +43,9 @@ export const listItem = [
     url: "/card",
     icon: <RiAlertFill />,
   },
+  {
+    name: "Dropdown",
+    url: "/dropdown",
+    icon: <RiAlertFill />,
+  },
 ];
