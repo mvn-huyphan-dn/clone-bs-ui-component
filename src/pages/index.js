@@ -12,6 +12,7 @@ import {
 } from "./Features";
 import CardPage from "./Features/CardPage";
 import DropdownPage from "./Features/DropdownPage";
+import ListgroupPage from "./Features/ListgroupPage";
 
 export default function Pages() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -53,6 +54,9 @@ export default function Pages() {
             </Route>
             <Route path="/dropdown">
               <DropdownPage />
+            </Route>
+            <Route path="/list-group">
+              <ListgroupPage />
             </Route>
           </Switch>
         </main>
