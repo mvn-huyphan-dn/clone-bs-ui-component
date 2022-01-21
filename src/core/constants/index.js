@@ -53,4 +53,9 @@ export const listItem = [
     url: "/list-group",
     icon: <RiAlertFill />,
   },
+  {
+    name: "Modal",
+    url: "/modal",
+    icon: <RiAlertFill />,
+  },
 ];
