@@ -297,8 +297,16 @@ $class-prefix: (
         background-color: $value !important;
       }
     }
-    .border-#{$key} {
-      border-color: $value !important;
+  }
+  .border-#{$key} {
+    border-color: $value !important;
+  }
+  .list-group-item-#{$key} {
+    background-color: tint-color($value, 80%) !important;
+  }
+  .list-group-item-action.list-group-item-#{$key} {
+    &:hover {
+      background-color: tint-color($value, 70%) !important;
     }
   }
 }
@@ -387,7 +395,7 @@ $component-prefix-list: (btn);
 //Caret
 // scss-docs-start caret-mixins
 $enable-caret: true;
-$caret-vertical-align: middle; 
+$caret-vertical-align: middle;
 // 0.255em;
 $caret-spacing: 0.255em;
 $caret-width: 0.3em;
@@ -454,3 +462,9 @@ $caret-width: 0.3em;
   }
 }
 // scss-docs-end caret-mixins
+
+@each $key, $value in $font-weight {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}

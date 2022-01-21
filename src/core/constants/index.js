@@ -48,4 +48,9 @@ export const listItem = [
     url: "/dropdown",
     icon: <RiAlertFill />,
   },
+  {
+    name: "List Group",
+    url: "/list-group",
+    icon: <RiAlertFill />,
+  },
 ];

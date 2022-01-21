@@ -25,6 +25,10 @@
   justify-content: center;
 }
 
+.align-items-start {
+  align-items: flex-start;
+}
+
 .align-item-center {
   align-items: center;
 }
@@ -43,4 +47,8 @@
 
 .position-absolute {
   position: absolute;
+}
+
+.mr-auto {
+  margin-right: auto;
 }

@@ -9,6 +9,8 @@
   color: #fff;
   transition: all 0.3s;
 
+  overflow-y: auto;
+
   .sidebar-logo {
     width: 250px;
     padding: 10px;
@@ -47,4 +49,3 @@
     margin-left: -250px;
   }
 }
-
