@@ -13,6 +13,7 @@ import {
 import CardPage from "./Features/CardPage";
 import DropdownPage from "./Features/DropdownPage";
 import ListgroupPage from "./Features/ListgroupPage";
+import ModalPage from "./Features/ModalPage";
 
 export default function Pages() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -57,6 +58,9 @@ export default function Pages() {
             </Route>
             <Route path="/list-group">
               <ListgroupPage />
+            </Route>
+            <Route path="/modal">
+              <ModalPage />
             </Route>
           </Switch>
         </main>
